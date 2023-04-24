@@ -18,6 +18,10 @@ void game_run(struct game *game){
     SDL_Texture *fontTexture = SDL_CreateTextureFromSurface(game->renderer, fontSurface);
     SDL_FreeSurface(fontSurface);
 
+    SDL_Surface *imgSurface = IMG_Load(G_OVER_FILENAME);
+    SDL_Texture *imgTexture = SDL_CreateTextureFromSurface(game->renderer, imgSurface);
+    SDL_FreeSurface(imgSurface);
+
     int charWidth = 32; // Width of a character in the bitmap font image
     int charHeight = 32; // Height of a character in the bitmap font image
     int charsPerRow = 11; // Number of characters per row in the bitmap font image
@@ -84,6 +88,12 @@ void game_run(struct game *game){
         SDL_RenderPresent(game->renderer);
     }
 
+
+    render_game_over(game->renderer, imgTexture);
+    SDL_RenderPresent(game->renderer);
+
+
+    SDL_Delay(2000);
 
 }
 
@@ -243,3 +253,17 @@ void render_timer(SDL_Renderer *renderer, Uint32 startTime, SDL_Texture *fontTex
     SDL_SetTextureColorMod(fontTexture, 255, 255, 255);
 }
 
+// img src: https://www.pngmart.com/image/287289
+void render_game_over(SDL_Renderer *renderer, SDL_Texture *game_over_texture) {
+    int texture_width, texture_height;
+    SDL_QueryTexture(game_over_texture, NULL, NULL, &texture_width, &texture_height);
+
+    SDL_Rect dest_rect = {
+        .x = (SCREEN_WIDTH - texture_width) / 2,
+        .y = (SCREEN_HEIGHT - texture_height) / 2,
+        .w = texture_width,
+        .h = texture_height,
+    };
+
+    SDL_RenderCopy(renderer, game_over_texture, NULL, &dest_rect);
+}
