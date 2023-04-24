@@ -31,3 +31,7 @@
 #define MEDIUM_Y      (0.75 * SCREEN_HEIGHT)
 #define HARD_X        (0.73 * SCREEN_WIDTH - 0.5 * DIFFICULTY_WIDTH)
 #define HARD_Y        (0.75 * SCREEN_HEIGHT)
+#define NUM_SECTORS 6
+#define ANGLE_STEP (2 * M_PI / 50)
+#define TIMER_FILENAME "../assets/digits-small.png"
+#define G_OVER_FILENAME "../assets/game-over.png"

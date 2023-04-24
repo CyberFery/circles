@@ -4,7 +4,7 @@
 #include "sdl2.h"
 #include "constants.h"
 #include "menu.h"
-
+#include "game.h"
 
 // --------------- //
 // Data structures //
