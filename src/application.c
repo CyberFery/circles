@@ -55,6 +55,21 @@ void application_run(struct application *application) {
                     application->game->state= GAME_ON;
                     application->state = APPLICATION_STATE_PLAY;
                 }
+                 else if (application->menu->state == MENU_EASY) {
+                    application->game->state= GAME_ON;
+                    application->game->difficulty= EASY;
+                    application->state = APPLICATION_STATE_PLAY;
+                }
+                 else if (application->menu->state == MENU_MEDIUM) {
+                    application->game->state= GAME_ON;
+                    application->game->difficulty= MEDIUM;
+                    application->state = APPLICATION_STATE_PLAY;
+                }
+                 else if (application->menu->state == MENU_HARD) {
+                    application->game->state= GAME_ON;
+                    application->game->difficulty= HARD;
+                    application->state = APPLICATION_STATE_PLAY;
+                }
                 break;
             case APPLICATION_STATE_PLAY:
                 game_run(application->game);

@@ -27,7 +27,7 @@ int menu_alpha(bool chosen) {
 
 void menu_run(struct menu *menu) {
     SDL_Event e;
-    while (menu->state != MENU_PLAY && menu->state != MENU_QUIT) {
+    while (menu->state != MENU_PLAY && menu->state != MENU_QUIT && menu->state != MENU_EASY&& menu->state != MENU_MEDIUM && menu->state != MENU_HARD) {
         while (SDL_PollEvent(&e) != 0) {
             if (e.type == SDL_QUIT) {
                 menu->state = MENU_QUIT;
@@ -69,6 +69,15 @@ void menu_run(struct menu *menu) {
                             menu->state = MENU_PLAY;
                         } else if (menu->state == MENU_QUIT_FOCUS) {
                             menu->state = MENU_QUIT;
+                        }
+                        else if (menu->state == MENU_EASY_FOCUS) {
+                            menu->state = MENU_EASY;
+                        }
+                        else if (menu->state == MENU_MEDIUM_FOCUS) {
+                            menu->state = MENU_MEDIUM;
+                        }
+                        else if (menu->state == MENU_HARD_FOCUS) {
+                            menu->state = MENU_HARD;
                         }
                         break;
 
