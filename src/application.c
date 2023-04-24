@@ -79,6 +79,7 @@ void application_run(struct application *application) {
                 }
                 break;
             case APPLICATION_STATE_QUIT:
+                application_shut_down(application);
                 break;
         }
     }
