@@ -20,7 +20,10 @@ typedef struct {
 
 enum game_state { GAME_ON, GAME_OVER };
 
+enum game_difficulty{EASY, MEDIUM, HARD};
+
 struct game {
+  enum game_difficulty difficulty;
   enum game_state state;
   SDL_Renderer *renderer;
 };

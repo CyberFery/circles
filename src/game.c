@@ -10,6 +10,7 @@ struct game *game_initialize(SDL_Renderer *renderer) {
     game = malloc(sizeof(struct game));
     game->renderer = renderer;
     game->state = GAME_ON;
+    game->difficulty = EASY;
     return game;
 }
 
@@ -66,7 +67,18 @@ void game_run(struct game *game){
         draw_triangle(game->renderer, circle_x, circle_y, circle_radius, triangle_x, triangle_y);
 
         for (int i = 0; i < NUM_SECTORS; i++) {
-            update_obstacle(&obstacles[i], 3.0f);
+            switch(game->difficulty){
+                case EASY:
+                    update_obstacle(&obstacles[i], 2.0f);
+                    break;
+                case MEDIUM:
+                    update_obstacle(&obstacles[i], 4.0f);
+                    break;
+                case HARD:
+                    update_obstacle(&obstacles[i], 6.0f);
+                    break;
+            }
+
             if (obstacles[i].active) {
                 draw_obstacle(game->renderer, circle_x, circle_y, &obstacles[i]);
             }
