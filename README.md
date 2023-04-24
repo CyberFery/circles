@@ -2,34 +2,32 @@
 
 ## Description
 
-* Description du projet en quelques phrases.
-* Mentionner le contexte (cours, sigle, université, etc.).
+* Il s'agit d'un jeu simple créé en utilisant SDL2. Le jeu consiste à contrôler un triangle pour éviter des obstacles en tournant autour d'un cercle au centre de l'écran. L'objectif est de survivre le plus longtemps possible.
+
+* Ceci est le troisieme projet dans le cadre du cours [inf3135](https://etudier.uqam.ca/cours?sigle=INF3135)
+enseigné par Serge,Dogny à l'Université du Québec à Montréal (UQAM).
 
 ## Auteurs
 
-- Prénom et nom (Code permanent)
-- Prénom et nom (Code permanent)
-- Prénom et nom (Code permanent)
+- Yacine et Ferrat (FERY14099608)
 
 ## Dépendances
 
-Avant même d'expliquer le fonctionnement de votre programme, décrivez toutes
-les dépendances de votre projet, autant au niveau des logiciels (s'il y en a)
-que des bibliothèques (par exemple SDL2). Fournissez les liens vers les sites
-officiels des dépendances si possible. Ceci permettra à l'utilisateur de savoir
-ce qu'il doit installer pour faire tourner votre programme. Pas besoin
-d'expliquer comment faire l'installation, mais simplement référer aux sites
-officiels.
+Ce projet nécessite les bibliothèques suivantes :
+
+- SDL2 : https://www.libsdl.org/download-2.0.php
+- SDL2_image : https://www.libsdl.org/projects/SDL_image/
+- SDL2_gfx : https://www.ferzkopp.net/Software/SDL2_gfx/Docs/html/index.html
+
+Veuillez vous référer aux sites officiels pour les instructions d'installation.
 
 ## Fonctionnement
 
-* Expliquez comment compiler, comment lancer l'application et comment
-  fonctionne le jeu
-* Quel est sont but?
-* Quelles touches permettent de naviguer dans le menu?
-* Quelles touches permettent de déplacer le triangle?
-* N'hésitez pas à inclure des captures d'écran ici, comme ça, ça fait de la
-  publicité pour votre jeu!
+1. Compilez le projet en utilisant le Makefile fourni. `make`
+2. Exécutez le binaire compilé pour démarrer le jeu. `./circles`
+3. Utilisez les flèches gauche et droite pour vous déplacer autour du cercle et éviter les obstacles.
+4. Survivez le plus longtemps possible pour obtenir un score élevé.
+
 
 ## Plateformes supportées
 
@@ -38,7 +36,9 @@ avec la version.
 
 ## Références
 
-Citez vos sources ici, s'il y a lieu.
+Le jeu a été testé sur les plateformes suivantes :
+
+- Linux (Garuda)
 
 ## Division des tâches
 
@@ -46,18 +46,18 @@ Donnez ici une liste des tâches de chacun des membres de l'équipe. Utilisez la
 syntaxe suivante (les crochets vides indiquent que la tâche n'est pas
 complétée, les crochets avec un `X` indique que la tâche est complétée):
 
-* [ ] Gestion du menu (Alice)
-* [ ] Affichage de la scène (Bob)
-* [ ] Affichage du chronomètre (Carl)
-* [ ] Animation des murs (Bob)
-* [X] Animation du joueur (Alice)
-* [ ] Détection des collisions (Carl)
-* [ ] Affichage d'une partie terminée (Bob)
-* [X] Gestion de la musique principale (Alice)
-* [ ] Gestion des sons lorsqu'on navigue dans le menu (Alice)
-* [ ] Gestion de la musique de fin de partie (Carl)
+* [x] Gestion du menu
+* [x] Affichage de la scène
+* [x] Affichage du chronomètre
+* [x] Animation des murs
+* [X] Animation du joueur
+* [x] Détection des collisions
+* [x] Affichage d'une partie terminée
+* [ ] Gestion de la musique principale
+* [ ] Gestion des sons lorsqu'on navigue dans le menu
+* [ ] Gestion de la musique de fin de partie
 
 ## État du projet
 
-Indiquer si le projet est complété et sans bogue. Sinon, expliquez ce qui
-manque ou ce qui ne fonctionne pas.
+Il manque la gestion de la difficulté.
+
