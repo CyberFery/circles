@@ -35,6 +35,11 @@ struct application *application_initialize() {
         fprintf(stderr, "Failed to initialize menu: %s\n", IMG_GetError());
         return NULL;
     }
+    application->game = game_initialize(application->renderer);
+        if (application->menu == NULL) {
+        fprintf(stderr, "Failed to initialize game: %s\n", IMG_GetError());
+        return NULL;
+    }
     application->state = APPLICATION_STATE_MENU;
     return application;
 }
@@ -47,10 +52,16 @@ void application_run(struct application *application) {
                 if (application->menu->state == MENU_QUIT) {
                     application->state = APPLICATION_STATE_QUIT;
                 } else if (application->menu->state == MENU_PLAY) {
-                    application->state = APPLICATION_STATE_QUIT;
+                    application->game->state= GAME_ON;
+                    application->state = APPLICATION_STATE_PLAY;
                 }
                 break;
             case APPLICATION_STATE_PLAY:
+                game_run(application->game);
+                if (application->game->state == GAME_OVER){
+                    application->state = APPLICATION_STATE_MENU;
+                    application->menu->state = MENU_PLAY_FOCUS;
+                }
                 break;
             case APPLICATION_STATE_QUIT:
                 break;
