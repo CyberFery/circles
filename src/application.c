@@ -74,6 +74,7 @@ void application_shut_down(struct application *application) {
     SDL_DestroyRenderer(application->renderer);
     SDL_DestroyWindow(application->window);
     menu_delete(application->menu);
+    game_delete(application->game);
     free(application);
     application = NULL;
     IMG_Quit();
