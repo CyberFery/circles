@@ -31,20 +31,16 @@ Veuillez vous référer aux sites officiels pour les instructions d'installation
 
 ## Plateformes supportées
 
-Indiquez toutes les plateformes sur lesquelles vous avez testé l'application,
-avec la version.
-
-## Références
-
 Le jeu a été testé sur les plateformes suivantes :
 
 - Linux (Garuda)
 
-## Division des tâches
+## Références
 
-Donnez ici une liste des tâches de chacun des membres de l'équipe. Utilisez la
-syntaxe suivante (les crochets vides indiquent que la tâche n'est pas
-complétée, les crochets avec un `X` indique que la tâche est complétée):
+- Image game over : https://www.pngmart.com/image/287289
+
+## Tâches
+
 
 * [x] Gestion du menu
 * [x] Affichage de la scène
