@@ -42,18 +42,16 @@ Le jeu a été testé sur les plateformes suivantes :
 ## Tâches
 
 
-* [x] Gestion du menu
-* [x] Affichage de la scène
-* [x] Affichage du chronomètre
-* [x] Animation des murs
+* [X] Gestion du menu
+* [X] Affichage de la scène
+* [X] Affichage du chronomètre
+* [X] Animation des murs
 * [X] Animation du joueur
-* [x] Détection des collisions
-* [x] Affichage d'une partie terminée
-* [ ] Gestion de la musique principale
-* [ ] Gestion des sons lorsqu'on navigue dans le menu
-* [ ] Gestion de la musique de fin de partie
+* [X] Détection des collisions
+* [X] Affichage d'une partie terminée
+* [X] Gestion de la difficulté
 
 ## État du projet
 
-Il manque la gestion de la difficulté.
+Le projet a été complété et tout est fonctionnel.
 
