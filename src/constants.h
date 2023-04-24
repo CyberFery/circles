@@ -18,4 +18,16 @@
 #define QUIT_WIDTH 160
 #define QUIT_X (0.75 * SCREEN_WIDTH - 0.5 * QUIT_WIDTH)
 #define QUIT_Y (0.45 * SCREEN_HEIGHT)
-
+#define DIFFICULTY_FILENAME "../assets/difficulty-small.png"
+#define DIFFICULTY_WIDTH 325
+#define DIFFICULTY_X (0.5 * SCREEN_WIDTH - 0.5 * DIFFICULTY_WIDTH)
+#define DIFFICULTY_Y (0.8 * SCREEN_HEIGHT)
+#define EASY_FILENAME "../assets/easy-small.png"
+#define MEDIUM_FILENAME "../assets/medium-small.png"
+#define HARD_FILENAME "../assets/hard-small.png"
+#define EASY_X        (0.50 * SCREEN_WIDTH - 0.5 * DIFFICULTY_WIDTH)
+#define EASY_Y        (0.75 * SCREEN_HEIGHT)
+#define MEDIUM_X      (0.60 * SCREEN_WIDTH - 0.5 * DIFFICULTY_WIDTH)
+#define MEDIUM_Y      (0.75 * SCREEN_HEIGHT)
+#define HARD_X        (0.73 * SCREEN_WIDTH - 0.5 * DIFFICULTY_WIDTH)
+#define HARD_Y        (0.75 * SCREEN_HEIGHT)
