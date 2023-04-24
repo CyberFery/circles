@@ -97,6 +97,12 @@ void game_run(struct game *game){
 
 }
 
+void game_delete(struct game *game) {
+    if (game != NULL) {
+        free(game);
+    }
+}
+
 void draw_circle(SDL_Renderer *renderer, int x, int y, int radius) {
     filledCircleRGBA(renderer, x, y, radius, 58, 58, 58, 255);
 }

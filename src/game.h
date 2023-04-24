@@ -47,6 +47,12 @@ struct game *game_initialize(SDL_Renderer *renderer);
 void game_run(struct game *game);
 
 /**
+ *
+ */
+
+void game_delete(struct game *game);
+
+/**
  * Draws a circle on the renderer.
  *
  * @param renderer  The SDL_Renderer to draw on.
