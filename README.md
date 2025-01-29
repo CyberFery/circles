@@ -4,12 +4,6 @@
 
 * Il s'agit d'un jeu simple créé en utilisant SDL2. Le jeu consiste à contrôler un triangle pour éviter des obstacles en tournant autour d'un cercle au centre de l'écran. L'objectif est de survivre le plus longtemps possible.
 
-* Ceci est le troisieme projet dans le cadre du cours [inf3135](https://etudier.uqam.ca/cours?sigle=INF3135)
-enseigné par Serge,Dogny à l'Université du Québec à Montréal (UQAM).
-
-## Auteurs
-
-- Yacine et Ferrat (FERY14099608)
 
 ## Dépendances
 
