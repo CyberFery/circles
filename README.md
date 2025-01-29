@@ -1,4 +1,4 @@
-# Travail pratique 3 : Le jeu *Circles*
+# Le jeu *Circles*
 
 ## Description
 
